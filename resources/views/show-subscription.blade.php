@@ -11,7 +11,7 @@
       <h2 class="panel-heading">{{ $title }}</h2>
       <ul>
 
-        <? $subscriptionsTypes = config('subscription-vars.subscriptionType'); ?>
+      <? $subscriptionsTypes = \App\Http\Controllers\SubscriptionMealsController::subscriptionTypes(); ?>
         @foreach($subscriptions as $subscription)
           <li>
             ФИО: {{ $subscription->fio }}

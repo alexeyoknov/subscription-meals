@@ -14,6 +14,10 @@ class SubscriptionMealsController extends Controller
         return $weekArray[$dayIndex];
     }
 
+    public static function subscriptionTypes(){
+        return ['sub_everyday','sub_day_after_day','sub_two_days_after_day'];
+    }
+
     public static function weekDays(string $days){
 
         $indexes = \explode(' ',$days);

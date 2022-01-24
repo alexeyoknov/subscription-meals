@@ -47,7 +47,7 @@
         <div class="form-group">
           <label for="subscriptionType">Расписание доставки:</label>
           <select name="subscriptionType" class="form-control" id="subscriptionType">
-            <? $subscriptionsTypes = config('subscription-vars.subscriptionType'); ?>
+            <? $subscriptionsTypes = \App\Http\Controllers\SubscriptionMealsController::subscriptionTypes(); ?>
             @foreach($subscriptionsTypes as $key => $val)
               <option value={{ $key }}><? echo __('subscription.'.$val);?></option>
             @endforeach
